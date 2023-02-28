@@ -1,9 +1,12 @@
-import React from 'react'
+import * as actionType from '../actions/type';
 
-export const tabReducer = () => {
-  return (
-    <div>tabReducer</div>
-  )
+
+export const tabReducer = (state = actionType.ALL_TODOS,action) => {
+  switch(action.type){
+    case actionType.TOGGLE_TAB:
+  
+    return action.selected
+    default:
+      return state;
+  }
 }
-
-export default tabReducer
