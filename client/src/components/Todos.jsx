@@ -11,15 +11,15 @@ import Todo from './Todo';
 import Tabs from './Tabs';
 
 export const Todos = () => {
-
     const dispatch = useDispatch();
+  
 
     const todos = useSelector(state => state.todos);
     const currentTab = useSelector(state => state.currentTab);
 
     useEffect(() => {
-        dispatch(getAllTodos());
-    }, [])
+    dispatch(getAllTodos());
+    }, [dispatch])
 
     const getTodos = () => {
         if (currentTab === ALL_TODOS) {
