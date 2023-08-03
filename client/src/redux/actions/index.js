@@ -51,6 +51,7 @@ export const deleteTodo = (id) => async (dispatch) => {
       console.log('Error while calling deleteTodo API', error.message);
    }
 }
+
 export const toggleTab = (tab)=> async (dispatch) =>{
    dispatch({type: TOGGLE_TAB,selected:tab})
 }
