@@ -6,7 +6,7 @@ dotenv.config();
 const Connection = () => {
 
     const MONGODB_URI = process.env.URI;
-    mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+    mongoose.connect(MONGODB_URI);
 
     mongoose.connection.on('connected', () => {
         console.log('Database connected Successfully');
