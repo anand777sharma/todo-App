@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 
 import { addNewTodo } from "../redux/actions";
+import Progress from "./Progress";
 
 
 const TodoForm = () => {
@@ -22,15 +23,21 @@ const TodoForm = () => {
         setText(e.target.value);
     }
 
-    return (
+    return (<>
         <form className="form" onSubmit={onFormSubmit}>
-            <input  
+            <input
                 placeholder="Enter new todo..."
                 className="input"
                 onChange={onInputChange}
                 value={text}
             />
         </form>
+        <div className="d-flex justify-content-center mt-4 p-4">
+            <Progress />
+        </div>
+
+    </>
+
     )
 }
 

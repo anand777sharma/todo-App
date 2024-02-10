@@ -43,7 +43,7 @@ export const Todos = () => {
     }
 
     return (
-        <article>
+        <div className="">
             <div>
                 <Tabs currentTab={currentTab} />
                 {
@@ -55,7 +55,7 @@ export const Todos = () => {
                     ): null
                 }
             </div>
-            <ul>
+            <ul className="overflow-auto mt-3" style={{height:450}}>
                 {
                     getTodos().map(todo => (
                         <Todo
@@ -65,7 +65,7 @@ export const Todos = () => {
                     ))
                 }
             </ul>
-        </article>
+        </div>
     )
 }
 
