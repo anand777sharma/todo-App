@@ -2,7 +2,6 @@ import React from 'react'
 import "./progress.css"
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import { getAllTodos } from "../redux/actions/index";
-import { ALL_TODOS, DONE_TODOS, ACTIVE_TODOS } from "../redux/actions/type";
 import { useDispatch, useSelector } from 'react-redux';
 
 import { useEffect } from "react";
